@@ -14,7 +14,7 @@ applications.
 
 ## Details
 
-* Location: Kyoto University
+* Location: Room 101, KIER North building (経済研究所北館), Kyoto University
 * Date: 5th June 2025
 * Time: 1:15pm
 * Instructor: [John Stachurski](https://johnstachurski.net/)
