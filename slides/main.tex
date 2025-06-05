@@ -28,7 +28,7 @@
         \vspace{0.5em}
         \item AI software and hardware
         \vspace{0.5em}
-        \item Repurposing AI software and hardware for econ
+        \item Can we use this for econ?
         \vspace{0.5em}
         \item Applications
     \end{enumerate}
@@ -42,9 +42,7 @@
 
 
     \begin{itemize}
-        \item Better understanding of core AI methods
-        \medskip
-        \item Better understanding of core tools (hardware / software)
+        \item Better understanding of core AI methods / tools
         \medskip
         \item How can this knowledge be applied to economic modeling today?
     \end{itemize}
@@ -105,10 +103,12 @@
 
 \begin{frame}
     
-    Develops algorithms and codebases using LLMs
+    Develops algorithms and code using an ensemble of LLMs
 
     \vspace{0.5em}
-    Asks an ensemble of LLMs and then tests, iterates, refines
+    \begin{itemize}
+        \item Test, iterate, refine
+    \end{itemize}
 
     \vspace{0.5em}
     \vspace{0.5em}
@@ -296,7 +296,7 @@
 
 \begin{frame}{AI coding affects optimal language choice}
     
-    ``I'm definitely stronger with Python than MATLAB.''
+    ``I'm definitely \brown{stronger with Python than MATLAB}.''
 
     \vspace{0.5em}
     ``My capabilities with Python
@@ -304,7 +304,7 @@
     ecosystem of libraries, frameworks, and modern development practices.''
 
     \vspace{0.5em}
-    ``I'm definitely stronger with Python than Julia.''
+    ``I'm definitely \brown{stronger with Python than Julia}.''
 
     \vspace{0.5em}
     ``While I understand Julia's syntax and core concepts, my expertise with it
@@ -771,7 +771,8 @@ outputs = parallel_function(list_of_tasks)
 
 \begin{frame}
 
-    A systematic approach for computing derivatives of functions expressed as computer programs
+    A systematic approach for \brown{computing derivatives of functions
+    expressed as computer programs}
 
         \vspace{0.5em}
     Core idea:
@@ -786,7 +787,7 @@ outputs = parallel_function(list_of_tasks)
         \vspace{0.5em}
         \vspace{0.5em}
         \vspace{0.5em}
-    Outcome: Exact, efficient, automated 
+        Outcome: \brown{Exact, efficient, automated}
 
 \end{frame}
 
@@ -794,18 +795,18 @@ outputs = parallel_function(list_of_tasks)
     
     
     \begin{minted}{python}
-# Set up loss function
-def loss(θ, x, y):
-  return jnp.sum((y - f(θ, x))**2)
+# Set learning rate
+λ = 0.01
 
-# Set up gradient vector of loss function
-loss_gradient = grad(loss)
+# Define function to minimize
+def f(θ):
+  return jnp.sum(θ**2)
 
-# Evaluate gradient at θ
-d = loss_gradient(θ, x_data, y_data)
+# Set up gradient function 
+Df = grad(f)
 
 # Update current guess
-θ = θ - λ * d
+θ = θ - λ * Df(θ)
     \end{minted}
 
 \end{frame}
@@ -826,11 +827,11 @@ def f(x):
     Advantages over traditional (AOT) compilers:
 
     \begin{itemize}
-        \item cleaner code
+        \item cleaner code 
     \vspace{0.5em}
         \item more portable
     \vspace{0.5em}
-        \item lower compile times
+        \item lower compile times -- only compile as required
     \vspace{0.5em}
         \item automatic parallelization (same code for CPUs / GPUs)
     \end{itemize}
@@ -1036,11 +1037,11 @@ grad_loss = jit(grad(loss))
 \begin{frame}{Summary}
 
     \begin{itemize}
-        \item We are at the start of a massive AI revolution
+        \item We are witnessing an AI revolution
         \medskip
-        \item This revolution will have a huge impact on science
+        \item This revolution is changing scientific research
         \medskip
-        \item What impact on economics?
+        \item What impact on comp econ?
     \end{itemize}
 
         \medskip
@@ -1048,11 +1049,13 @@ grad_loss = jit(grad(loss))
 
     At minimum, we can immediately use
     %
-    \begin{itemize}
-        \item AI for code authoring
+    \begin{enumerate}
+        \item AI coding agents --- \brown{use Python}
         \medskip
-        \item AI hardware/software for standard computational econ models
-    \end{itemize}
+        \item AI software for traditional comp econ --- \brown{use JAX}
+        \medskip
+        \item AI hardware for traditional comp econ --- \brown{use GPUs}
+    \end{enumerate}
 
 
 \end{frame}
